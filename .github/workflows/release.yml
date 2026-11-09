@@ -1,0 +1,11 @@
+name: Release
+on:
+  push:
+    branches: [main]
+jobs:
+  release:
+    uses: msmit-CN/terraform-azure-workflows/.github/workflows/release-please.yml@poc/hotfix-release
+    secrets: inherit
+    permissions:
+      contents: write
+      pull-requests: write

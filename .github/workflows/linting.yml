@@ -1,0 +1,7 @@
+name: "linting"
+on:
+  pull_request:
+    types: [opened, edited, synchronize]
+jobs:
+  checks:
+    uses: msmit-CN/terraform-azure-workflows/.github/workflows/linting.yml@poc/hotfix-release

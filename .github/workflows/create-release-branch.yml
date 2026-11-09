@@ -1,0 +1,18 @@
+name: create-release-branch
+
+on:
+  workflow_dispatch:
+    inputs:
+      major:
+        description: Major version to maintain, e.g. "3"
+        required: true
+        type: string
+
+jobs:
+  create-release-branch:
+    uses: msmit-CN/terraform-azure-workflows/.github/workflows/create-release-branch.yml@poc/hotfix-release
+    with:
+      major: ${{ inputs.major }}
+    secrets: inherit
+    permissions:
+      contents: write
