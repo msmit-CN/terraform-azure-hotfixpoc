@@ -46,3 +46,4 @@ resource "azurerm_management_lock" "this" {
   lock_level = each.value.management_lock.level
   notes      = each.value.management_lock.notes
 }
+# simulated breaking change for v2
