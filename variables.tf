@@ -21,7 +21,7 @@ variable "use_existing_groups" {
 }
 
 variable "location" {
-  description = "default azure location to be used."
+  description = "default azure location to be used for all groups."
   type        = string
   default     = null
 }
