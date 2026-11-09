@@ -23,8 +23,8 @@ resource "azurerm_resource_group" "this" {
 
   managed_by = each.value.managed_by
 
-  tags = coalesce(
-    each.value.tags, var.tags
+  tags = merge(
+    var.tags, coalesce(each.value.tags, {})
   )
 }
 
